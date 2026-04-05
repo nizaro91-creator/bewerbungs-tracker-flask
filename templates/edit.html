@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bewerbung bearbeiten</title>
+</head>
+<body>
+
+<h1>Bewerbung bearbeiten</h1>
+
+<form method="POST">
+    <input type="text" name="firma" value="{{ bewerbung['firma'] }}" required><br><br>
+    <input type="text" name="stelle" value="{{ bewerbung['stelle'] }}" required><br><br>
+
+    <select name="status">
+        <option value="Offen" {% if bewerbung['status'] == 'Offen' %}selected{% endif %}>Offen</option>
+        <option value="Angenommen" {% if bewerbung['status'] == 'Angenommen' %}selected{% endif %}>Angenommen</option>
+        <option value="Abgelehnt" {% if bewerbung['status'] == 'Abgelehnt' %}selected{% endif %}>Abgelehnt</option>
+    </select><br><br>
+
+    <input type="text" name="notizen" value="{{ bewerbung['notizen'] }}"><br><br>
+
+    <button type="submit">Speichern</button>
+</form>
+
+<br>
+<a href="/">⬅ Zurück</a>
+
+</body>
+</html>

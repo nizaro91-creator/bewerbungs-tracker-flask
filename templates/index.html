@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bewerbungs-Tracker</title>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+<h1 class="mb-4">📋 Bewerbungs-Tracker</h1>
+
+<!-- FORM -->
+<div class="card p-4 mb-4">
+    <h2>Bewerbung hinzufügen</h2>
+
+    <form action="/add" method="POST" class="row g-2">
+
+        <div class="col-md-3">
+            <input class="form-control" type="text" name="firma" placeholder="Firma" required>
+        </div>
+
+        <div class="col-md-3">
+            <input class="form-control" type="text" name="stelle" placeholder="Stelle" required>
+        </div>
+
+        <div class="col-md-2">
+            <select class="form-control" name="status">
+                <option value="Offen">Offen</option>
+                <option value="Angenommen">Angenommen</option>
+                <option value="Abgelehnt">Abgelehnt</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <input class="form-control" type="text" name="notizen" placeholder="Notizen">
+        </div>
+
+        <div class="col-md-1">
+            <button class="btn btn-primary w-100">Add</button>
+        </div>
+
+    </form>
+</div>
+
+<!-- TABLE -->
+<div class="card p-4">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Firma</th>
+                <th>Stelle</th>
+                <th>Status</th>
+                <th>Notizen</th>
+                <th>Aktion</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for b in bewerbungen %}
+            <tr>
+                <td>{{ b["firma"] }}</td>
+                <td>{{ b["stelle"] }}</td>
+
+                <td class="
+                    {% if b['status'] == 'Offen' %}status-offen
+                    {% elif b['status'] == 'Angenommen' %}status-angenommen
+                    {% else %}status-abgelehnt
+                    {% endif %}
+                ">
+                    {{ b["status"] }}
+                </td>
+
+                <td>{{ b["notizen"] }}</td>
+
+                <td>
+                    <a class="btn btn-edit btn-sm" href="/edit/{{ b['id'] }}">Edit</a>
+                    <a class="btn btn-delete btn-sm" href="/delete/{{ b['id'] }}">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+</div>
+
+</body>
+</html>

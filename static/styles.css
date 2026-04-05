@@ -1,0 +1,180 @@
+/* ===== BODY ===== */
+body {
+background-color: #eef1f5;
+font-family: 'Segoe UI', sans-serif;
+color: #1e293b;
+}
+
+/* ===== CONTAINER CENTER ===== */
+.container {
+max-width: 700px;
+margin-top: 60px;
+}
+
+/* ===== CARD ===== */
+.card {
+background: white;
+border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+border: none;
+}
+
+/* ===== TITLE ===== */
+h1 {
+font-weight: bold;
+color: #0f172a;
+}
+
+/* ===== INPUT ===== */
+.form-control {
+border-radius: 8px;
+border: 1px solid #cbd5e1;
+padding: 10px;
+}
+
+.form-control:focus {
+border-color: #0ea5e9;
+box-shadow: none;
+}
+
+/* ===== BUTTON PRIMARY ===== */
+.btn-primary {
+background-color: #0ea5e9;
+border: none;
+border-radius: 8px;
+padding: 10px;
+}
+
+.btn-primary:hover {
+background-color: #0284c7;
+}
+
+/* ===== BUTTONS SMALL ===== */
+.btn-warning {
+background-color: #facc15;
+border: none;
+border-radius: 6px;
+}
+
+.btn-danger {
+background-color: #ef4444;
+border: none;
+border-radius: 6px;
+}
+
+/* ===== TABLE ===== */
+.table {
+background: white;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.table thead {
+background-color: #f1f5f9;
+}
+
+.table tbody tr:hover {
+background-color: #f8fafc;
+}
+
+/* ===== STATUS COLORS ===== */
+.status-offen {
+color: #f59e0b;
+font-weight: bold;
+}
+
+.status-angenommen {
+color: #22c55e;
+font-weight: bold;
+}
+
+.status-abgelehnt {
+color: #ef4444;
+font-weight: bold;
+}
+
+/* ===== SPACING ===== */
+.mb-4 {
+margin-bottom: 20px;
+}
+/* ===== EDIT BUTTON ===== */
+.btn-edit {
+    background-color: #0ea5e9;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-edit:hover {
+    background-color: #0284c7;
+    transform: scale(1.05);
+}
+
+/* ===== DELETE BUTTON ===== */
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #b91c1c;
+    transform: scale(1.05);
+}
+
+/* ===== CENTER PAGE ===== */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #eef1f5;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 60px;
+}
+
+/* ===== CARD ===== */
+.card {
+    width: 100%;
+}
+
+/* ===== TABLE SIZE ===== */
+.table {
+    width: 100%;
+    font-size: 16px;
+}
+
+/* ===== TABLE CELLS ===== */
+.table td, 
+.table th {
+    padding: 12px;
+    text-align: center;
+}
+
+/* ===== FORM GRID FIX ===== */
+form.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+form .col-md-3,
+form .col-md-2,
+form .col-md-1 {
+    flex: 1;
+}
+
+/* ===== BUTTON FULL WIDTH ===== */
+.w-100 {
+    width: 100%;
+}
