@@ -31,6 +31,7 @@ A simple and professional web application to manage job applications.
 
 -  Automatische Speicherung des Bewerbungsdatums
 -  PDF-Export für alle Bewerbungen
+-  Datum des Bewerbung hinzugefügt
 -  Verbesserte Benutzeroberfläche (UI)
 -  Fehler im Tabellenlayout behoben
   ![App Screenshot](screenshot1.png)
