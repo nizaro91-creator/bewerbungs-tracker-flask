@@ -178,3 +178,15 @@ form .col-md-1 {
 .w-100 {
     width: 100%;
 }
+.btn-success {
+    background-color: #8d818d;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-weight: 500;
+}
+
+.btn-success:hover {
+    background-color: #535351;
+    transform: scale(1.05);
+}
