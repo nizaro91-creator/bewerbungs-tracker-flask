@@ -10,6 +10,7 @@ import sqlite3
 
 app = Flask(__name__)
 
+
 def init_db():
     conn = sqlite3.connect("bewerbungen.db")
     conn.execute("""
